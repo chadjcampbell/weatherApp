@@ -16,7 +16,7 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/chadjcampbell/weatherApp/issues"
-  }, 
+  },
   "homepage": "https://github.com/chadjcampbell/weatherApp#readme",
   "devDependencies": {
     "@babel/core": "^7.19.1",

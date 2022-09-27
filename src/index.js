@@ -1,11 +1,13 @@
-import "./style.scss";
-import { renderData, getLocation } from "./dom";
+import './style.scss'
+import { renderData, getLocation } from './dom'
 
-renderData();
-getLocation();
+renderData()
 
-const unitsElement = document.querySelector("#units");
-unitsElement.addEventListener("change", renderData);
+const unitsElement = document.querySelector('#units')
+unitsElement.addEventListener('change', renderData)
 
-const searchBtn = document.querySelector("#searchBtn");
-searchBtn.addEventListener("click", renderData);
+const searchBar = document.querySelector('#searchBar')
+searchBar.addEventListener('submit', function (event) {
+  event.preventDefault()
+  renderData()
+})
