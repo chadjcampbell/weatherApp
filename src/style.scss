@@ -56,11 +56,13 @@ h1 {
 }
 
 #tHead {
+    height: 50px;
     background-color: rgb(253, 219, 175);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    font-size: 20pt;
 }
 
 #tMain {

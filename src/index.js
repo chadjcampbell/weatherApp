@@ -1,5 +1,5 @@
 import "./style.scss";
-import getWeather from "./weatherAPI";
 
-let currentWeather = getWeather();
-console.log(currentWeather);
+import { renderData } from "./dom";
+
+renderData();
