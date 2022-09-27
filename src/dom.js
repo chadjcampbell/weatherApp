@@ -12,8 +12,19 @@ function getUnits() {
   return units;
 }
 
+function changeUnits() {
+  renderData();
+}
+
 async function renderData() {
   const data = await getWeather();
+
+  let units;
+  if (getUnits() === "metric") {
+    units = "\u00B0 C";
+  } else {
+    units = "\u00B0 F";
+  }
 
   console.log(data);
 
@@ -29,16 +40,16 @@ async function renderData() {
   iconImg.src = `http://openweathermap.org/img/wn/${imgCode}@2x.png`;
 
   const currentTemp = document.querySelector("#currentTemp");
-  currentTemp.textContent = Math.round(data.main.temp);
+  currentTemp.textContent = Math.round(data.main.temp) + units;
 
   const humidity = document.querySelector("#humidity");
   humidity.textContent = Math.round(data.main.humidity) + "%";
 
   const tempHigh = document.querySelector("#tempHigh");
-  tempHigh.textContent = Math.round(data.main.temp_max);
+  tempHigh.textContent = Math.round(data.main.temp_max) + units;
 
   const tempLow = document.querySelector("#tempLow");
-  tempLow.textContent = Math.round(data.main.temp_min);
+  tempLow.textContent = Math.round(data.main.temp_min) + units;
 }
 
-export { renderData, getUnits };
+export { changeUnits, renderData, getUnits };

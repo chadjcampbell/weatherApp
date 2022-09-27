@@ -1,6 +1,7 @@
+import { getUnits } from "./dom.js";
+
 let cityName = "New York";
 let stateCode = "NY";
-let units = "imperial";
 
 async function getCoords() {
   const response = await fetch(
@@ -16,7 +17,7 @@ async function getCoords() {
 export default async function getWeather() {
   const { lat, lon } = await getCoords();
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=4e5a394bdfae8d05132f477470e49bbc&units=${units}`,
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=4e5a394bdfae8d05132f477470e49bbc&units=${getUnits()}`,
     { mode: "cors" }
   );
   const data = await response.json();

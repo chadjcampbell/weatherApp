@@ -1,8 +1,8 @@
 import "./style.scss";
 
-import { renderData, getUnits } from "./dom";
+import { renderData, getUnits, changeUnits } from "./dom";
 
 renderData();
 
 const unitsElement = document.querySelector("#units");
-unitsElement.addEventListener("change", getUnits);
+unitsElement.addEventListener("change", changeUnits);
