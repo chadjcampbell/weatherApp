@@ -3,7 +3,7 @@ import { getUnits, getLocation } from './dom.js'
 async function getCoords() {
   const [city, state] = getLocation()
   const response = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city},${state},USA&limit=5&appid=4e5a394bdfae8d05132f477470e49bbc`,
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city},${state},USA&limit=5&appid=4e5a394bdfae8d05132f477470e49bbc`,
     { mode: 'cors' }
   )
   const data = await response.json()
