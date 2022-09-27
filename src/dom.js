@@ -8,12 +8,15 @@ function getUnits() {
   } else {
     units = "imperial";
   }
-  console.log(units);
   return units;
 }
 
-function changeUnits() {
-  renderData();
+function getLocation() {
+  const searchInput = document.querySelector("#searchInput");
+  const [city, state] = searchInput.value.split(",");
+  console.log(city);
+  console.log(state);
+  return [city, state];
 }
 
 async function renderData() {
@@ -28,7 +31,6 @@ async function renderData() {
 
   console.log(data);
 
-  //DOM elements
   const tHead = document.querySelector("#tHead");
   tHead.textContent = `Todays Weather for ${data.name}`;
 
@@ -52,4 +54,4 @@ async function renderData() {
   tempLow.textContent = Math.round(data.main.temp_min) + units;
 }
 
-export { changeUnits, renderData, getUnits };
+export { renderData, getUnits, getLocation };
