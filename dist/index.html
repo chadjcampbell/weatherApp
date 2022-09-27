@@ -24,13 +24,33 @@
     <div id="today">
       <div id="tHead"></div>
       <div id="tMain">
-        <div id="icon"></div>
-        <p id="description"></p>
+        <div id="icon"><img id="iconImg" src="" alt="" /></div>
+        <h4 id="description"></h4>
         <div id="allStats">
-          <div class="stats"></div>
-          <div class="stats"></div>
-          <div class="stats"></div>
-          <div class="stats"></div>
+          <div class="stats">
+            <h3>Current Temp</h3>
+            <h4 class="statNum" id="currentTemp"></h4>
+          </div>
+          <div class="stats">
+            <h3>Humidity</h3>
+            <h4 class="statNum" id="humidity"></h4>
+          </div>
+          <div class="stats">
+            <h3>Todays High</h3>
+            <h4 class="statNum" id="tempHigh"></h4>
+          </div>
+          <div class="stats">
+            <h3>Todays Low</h3>
+            <h4 class="statNum" id="tempLow"></h4>
+          </div>
+        </div>
+        <div id="unitToggle">
+          <div id="imperial">&#176 F</div>
+          <label class="switch">
+            <input id="units" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <div id="metric">&#176 C</div>
         </div>
       </div>
     </div>
