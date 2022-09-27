@@ -36,7 +36,7 @@ async function renderData() {
 
     const iconImg = document.querySelector('#iconImg')
     const imgCode = data.weather[0].icon
-    iconImg.src = `http://openweathermap.org/img/wn/${imgCode}@2x.png`
+    iconImg.src = `https://openweathermap.org/img/wn/${imgCode}@2x.png`
 
     const currentTemp = document.querySelector('#currentTemp')
     currentTemp.textContent = Math.round(data.main.temp) + units
